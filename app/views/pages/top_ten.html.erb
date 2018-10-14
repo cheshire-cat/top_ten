@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Currency Code</th>
+        <th scope="col">Currency Name</th>
+        <th scope="col">Market Cap</th>
+        <th scope="col">Value in USD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @top_ten_table.each_with_index do |row, i| %>
+        <tr>
+          <td scope="row"><%= i + 1 %></td>
+          <td scope="row"><%= row[0] %></td>
+          <td scope="row"><%= row[1] %></td>
+          <td scope="row"><%= number_to_usd(row[2]) %></td>
+          <td scope="row"><%= number_to_usd(row[3]) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
