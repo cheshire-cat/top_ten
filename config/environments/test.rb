@@ -14,6 +14,16 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :test
   config.active_support.deprecation = :stderr
+
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
+
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
+    'provider' => 'github',
+    'uid' => '123545',
+    'info' => {
+      'name' => 'mockuser'
+    }
+  )
 end
