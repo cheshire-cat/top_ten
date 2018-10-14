@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'faraday'
 gem 'omniauth-github'
+gem 'redis-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

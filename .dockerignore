@@ -1,0 +1,11 @@
+.git
+.dockerignore
+Dockerfile
+.byebug_history
+/.bundle/*
+/log/*
+/tmp/*
+/storage/*
+/yarn-error.log
+/coverage/*
+/doc/*

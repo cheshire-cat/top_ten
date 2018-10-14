@@ -19,3 +19,4 @@
 /coverage
 /doc
 .env
+/production/secrets/*
