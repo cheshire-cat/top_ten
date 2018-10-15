@@ -20,3 +20,4 @@
 /doc
 .env
 /production/secrets/*
+.yardoc/
