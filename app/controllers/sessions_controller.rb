@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   def create
     begin
       @user = User.find_or_create_from_auth_hash(request.env['omniauth.auth'])
+      reset_session
       session[:user_id] = @user.id
       flash[:success] = 'Welcome!'
     rescue
@@ -17,7 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if current_user
-      session.delete(:user_id)
+      reset_session
       flash[:success] = 'See you!'
     end
 

@@ -99,3 +99,8 @@ sudo docker-compose -f docker-compose-production.yml up
 ### Visit <https://127.0.0.1:443>
 (Javascript should be enabled for correct work.)
 
+# Last fix
+
+Cookie hijack is unlikely to happen with this setup.
+However it possible in theory.
+Also it's prevention comes with decreasing speed and increasing load drawbacks.

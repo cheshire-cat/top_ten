@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protected
 
     def authorize
-      unless User.find_by(id: session[:user_id])
+      unless current_user
         flash[:warning] = 'Please Log In!'
 
         redirect_to root_path
